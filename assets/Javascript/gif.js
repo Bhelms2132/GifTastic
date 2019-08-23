@@ -10,5 +10,21 @@ function renderButtons() {
    for (var i = 0; i < topics.length; i++) {
 //--Adds button in jquery--//
    var a = $("<button>");
+   a.addClass("topic");
+   a.attr("data-name", topics[i]);
+   a.text(topics[i]);
+//--Adds button to the html--//
+   $("#buttons-view").append(a);
    }
 }
+
+$("#add-topic").on("click", function(event) {
+   event.preventDefault();
+//--Grabs text from the input box--//
+   var topic = $("#topic-input").val().trim();
+       topics.push(topic);
+
+       renderButtons();
+})
+
+renderButtons();
