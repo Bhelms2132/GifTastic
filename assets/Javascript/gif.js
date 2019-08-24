@@ -1,8 +1,7 @@
 //--Array of strings--//
 var topics = ["Carolina Panthers", "Beach", "Zakk Wylde", "Tyler Childers", "Golf", "Javascript"];
   console.log(topics);
-
-
+  
 //--Funtion for displaying topics data--//
 function renderButtons() {
    $("#buttons-view").empty();
@@ -18,7 +17,13 @@ function renderButtons() {
    }
 }
 
+var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + topics + "&api_key=yPggTPiRiu1TWfJN8xHwQP5AtSRuOkcl";
 
+//--Ajax request with queryURL--//
+$.ajax({
+   url: queryURL,
+   method: "Get"
+})
 
 //--Form function--//
 $("#add-topic").on("click", function(event) {
