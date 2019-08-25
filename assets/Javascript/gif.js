@@ -1,6 +1,6 @@
 //--Array of strings--//
-var topics = ["Carolina Panthers", "Beach", "Zakk Wylde", "Tyler Childers", "Golf", "DeadPool"];
-  console.log(topics);
+var topics = ["Carolina Panthers", "Kings of Leon", "Zakk Wylde", "Tyler Childers", "jiu jitsu", "Golf"];
+  
 //--Funtion for displaying topics data--//
 function renderButtons() {
   $("#buttons-view").empty();
@@ -17,7 +17,6 @@ function renderButtons() {
 }
 //--Click event listener added to buttons--//
 $(document).on("click", ".topic", function(){
-   console.log("button clicked");
    var topic = $(this).attr("data-name")
    var queryURL = "http:api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=yPggTPiRiu1TWfJN8xHwQP5AtSRuOkcl&limit=10";
    //--Ajax request with queryURL--//
@@ -26,16 +25,26 @@ $(document).on("click", ".topic", function(){
      method: "GET"
     })
     .then(function(response){
-      console.log(response);
-     console.log(response.data [0].rating);
-   //--Looping through each result item--//
+  //--Looping through each result item--//
      for (var i = 0; i < response.data.length; i++){
-       console.log(response.data[i].rating);
-       $("#gif").prepend("<p>Rating: " + response.data[i].rating + "</p>");
+        $("#gif").prepend("<p>Rating: " + response.data[i].rating + "</p>");
         $("#gif").prepend("<img src='" + response.data[i].images.downsized_still.url + "'>");
-     }
-    });
-});
+       }
+      });
+      //--Function to animate but not working--//
+      $("#gif").on("click", function(){
+        console.log("#gif");
+        var state = $(this).attr("data-state");
+        if (state === "still") {
+            $(this).attr("src", $(this).attr("data-animate"));
+            $(this).attr("data-state", "animate");
+        } else {
+            $(this).attr("src", $(this).attr("data-still"));
+            $(this).attr("data-state", "still");
+        }
+      });
+ });
+ 
 //--Form function--//
 $("#add-topic").on("click", function(event) {
    event.preventDefault();

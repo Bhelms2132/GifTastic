@@ -1,14 +1,13 @@
 body {
     background-color: lightgray;
 }
-.container{
-   
-}
 
 .topic{
     background-color: lightsteelblue;
     color: black;
     margin: 1px;
+    width: 150px;
+    font-size: 15px;
     
 }
 
@@ -17,6 +16,7 @@ body {
 }
 #add-topic{
     background-color: lightsteelblue;
+    width: 100px;
 }
 
 label{
