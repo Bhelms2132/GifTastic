@@ -26,15 +26,17 @@ $(document).on("click", ".topic", function(){
     })
     .then(function(response){
   //--Looping through each result item--//
+  console.log(response);
      for (var i = 0; i < response.data.length; i++){
         $("#gif").prepend("<p>Rating: " + response.data[i].rating + "</p>");
-        $("#gif").prepend("<img src='" + response.data[i].images.downsized_still.url + "'>");
+        $("#gif").prepend("<img data-state='still' data-still='"+ response.data[i].images.downsized_still.url + "' data-animate='"+ response.data[i].images.downsized.url + "' src='" + response.data[i].images.downsized_still.url + "' >");
        }
       });
       //--Function to animate but not working--//
-      $("#gif").on("click", function(){
+      $(document).on("click", "img", function(){
         console.log("#gif");
         var state = $(this).attr("data-state");
+        console.log("State: " + state);
         if (state === "still") {
             $(this).attr("src", $(this).attr("data-animate"));
             $(this).attr("data-state", "animate");
