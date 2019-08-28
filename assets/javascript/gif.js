@@ -18,7 +18,7 @@ function renderButtons() {
 //--Click event listener added to buttons--//
 $(document).on("click", ".topic", function(){
    var topic = $(this).attr("data-name")
-   var queryURL = "http:api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=yPggTPiRiu1TWfJN8xHwQP5AtSRuOkcl&limit=10";
+   var queryURL = "https:api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=yPggTPiRiu1TWfJN8xHwQP5AtSRuOkcl&limit=10";
    //--Ajax request with queryURL--//
     $.ajax({
      url: queryURL,
