@@ -19,6 +19,8 @@ function renderButtons() {
 $(document).on("click", ".topic", function(){
    var topic = $(this).attr("data-name")
    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=yPggTPiRiu1TWfJN8xHwQP5AtSRuOkcl&limit=10";
+   console.log("QUERY URL: " + queryURL);
+   console.log("TOPIC: " + topic);
    //--Ajax request with queryURL--//
     $.ajax({
      url: queryURL,
