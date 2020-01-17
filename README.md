@@ -8,6 +8,7 @@ HTML, GHIPY API, JavaScript, jQuery, CSS
 
 
 
-
+## Added Topic
+Here is an example of a user suggesting the topic "Dogs".  Images related to the suggested topic "Dogs" are being returned to the user. 
 ![image](https://user-images.githubusercontent.com/52431116/72574163-18c47700-3896-11ea-86b9-97229501f6ee.png)
 
