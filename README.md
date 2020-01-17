@@ -3,6 +3,11 @@ GifTastic is a dynamic web page that has six different topics of interest to me.
 
 ## Technologies used
 HTML, GHIPY API, JavaScript, jQuery, CSS
+
+## My Interests
+Here you can see my interests that I have built in GifTastic.  It is returning images to  "Carolina Panthers" using GHIPY API. 
+
+
 ![image](https://user-images.githubusercontent.com/52431116/72573834-f3833900-3894-11ea-997c-ac3281a22981.png)
 
 
@@ -11,6 +16,8 @@ HTML, GHIPY API, JavaScript, jQuery, CSS
 
 
 ## Added Topic
-Here is an example of a user suggesting the topic "Dogs".  Images related to the suggested topic "Dogs" are being returned to the user. 
+Here is an example of a user suggesting the topic "Dogs".  Images related to the suggested topic "Dogs" are being returned to the user.
+
+
 ![image](https://user-images.githubusercontent.com/52431116/72574163-18c47700-3896-11ea-86b9-97229501f6ee.png)
 
