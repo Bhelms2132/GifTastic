@@ -3,6 +3,8 @@ GifTastic is a dynamic web page that has six different topics of interest to me.
 
 ## Technologies used
 HTML, GHIPY API, JavaScript, jQuery, CSS
+![image](https://user-images.githubusercontent.com/52431116/72573834-f3833900-3894-11ea-997c-ac3281a22981.png)
+
 
 
 
