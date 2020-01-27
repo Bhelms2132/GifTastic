@@ -4,6 +4,9 @@ GifTastic is a dynamic web page that has six different topics of interest to me.
 ## How GifTastic Works
 When the user clicks on a topics box, the app will return ten gifs related to the topic clicked. The gif will animate once the gif is clicked then become still when clicked on again.  The user can suggest a topic of interest to them in the suggested topic box and click submit. Once submitted, the suggested topic will populate beside of my topics of interest.
 
+## Link to GifTastic
+https://bhelms2132.github.io/GifTastic/
+
 ## Technologies Used
 HTML, GHIPY API, JavaScript, jQuery, CSS
 
